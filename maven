@@ -1,32 +1,18 @@
-@@ -0,0 +1,32 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-
-
-public class Testing {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
-		driver.get("http://localhost:8899/qaenv/");
-		System.out.println(driver.getCurrentUrl());
-		String expmsg="Hello, World!";
-		String actmsg=driver.findElement(By.xpath("html/body")).getText();
-		System.out.println("Expected Message : "+expmsg);
-		System.out.println("Actual Message   : "+actmsg);
-		if(expmsg.equals(actmsg))
-		{
-			System.out.println("Testing has Passed");
-		}
-		else
-		{
-			System.out.println("Testing has Failed");
-		}
-		driver.close();
-	}
-
-	}
+@@ -0,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>FunctionalTesting</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>
